@@ -7,13 +7,14 @@ import com.vinpin.livedatabus.sample.databinding.ActivityTestBinding
 
 class TestActivity : AppCompatActivity() {
 
-    private val viewBinding: ActivityTestBinding = ActivityTestBinding.inflate(layoutInflater)
+    private lateinit var viewBinding: ActivityTestBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_test)
+        viewBinding = ActivityTestBinding.inflate(layoutInflater)
+        setContentView(viewBinding.root)
 
-        LiveDataBus.get<String>("test2")?.observe(this) {
+        LiveDataBus.get<String>("test2")?.observeSticky(this) {
             viewBinding.txtContent.text = it
         }
 

@@ -9,11 +9,12 @@ import com.vinpin.livedatabus.sample.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private val viewBinding: ActivityMainBinding = ActivityMainBinding.inflate(layoutInflater)
+    private lateinit var viewBinding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        viewBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(viewBinding.root)
 
         LiveDataBus.get<String>("test1")?.observe(this) {
             viewBinding.txtContent.text = it
