@@ -60,5 +60,8 @@ class EventLiveData<T> : MutableLiveData<T>() {
         return eventObserver
     }
 
+    /**
+     * 获取当前版本
+     */
     fun getCurrentVersion(): Int = mCurrentVersion
 }
