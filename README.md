@@ -2,8 +2,6 @@
 
 基于 Android LiveData 实现的轻量级事件总线，替代传统 EventBus，具备生命周期感知能力，自动避免内存泄漏，使用简单、无侵入性。
 
-### 特性
-
 1. **生命周期感知**：依托 LiveData 特性，观察者（Activity/Fragment）会根据自身生命周期自动注册 /
    解注册，无需手动解绑，彻底解决内存泄漏问题；
 2. **线程安全**：内部使用 ConcurrentHashMap 管理事件通道，支持多线程并发操作，避免线程安全问题；
@@ -16,7 +14,7 @@
 ### 1. 集成方式
 
 ```kotlin
-    implementation("com.vinpin:livedatabus:1.0.1")
+implementation("com.vinpin:livedatabus:1.0.1")
 ```
 
 ### 2. API 使用
@@ -82,30 +80,3 @@ LiveDataBus.clear()
 | 线程切换   | 自动切换主线程（无需配置）        | 需手动指定线程（如 ThreadMode.MAIN） |
 | 使用复杂度  | 低（无需注解，直接调用）         | 较高（需添加 @Subscribe 注解）      |
 | 内存泄漏风险 | 无                    | 有（忘记解绑时）                   |
-
-## 许可证
-
-```
-plaintext
-MIT License
-
-Copyright (c) 2024 VinPin
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
