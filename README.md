@@ -14,7 +14,7 @@
 ### 1. 集成方式
 
 ```kotlin
-implementation("com.vinpin:livedatabus:1.0.1")
+implementation("com.github.VinPin:LiveDataBus:1.0.1")
 ```
 
 ### 2. API 使用
