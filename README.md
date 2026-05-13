@@ -88,7 +88,7 @@ LiveDataBus.clear()
 
 ## 构建
 
-LiveDataPermissions 使用现代 Gradle 构建系统，支持 Kotlin DSL 和版本目录（Version Catalogs）。
+LiveDataBus 使用现代 Gradle 构建系统，支持 Kotlin DSL 和版本目录（Version Catalogs）。
 
 - **编译 SDK**: 31
 - **最低 SDK**: 16
