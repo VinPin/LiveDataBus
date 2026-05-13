@@ -43,5 +43,6 @@ android {
 
 dependencies {
     implementation(project(":livedatabus"))
+    implementation(libs.android.material)
     implementation(libs.constraintlayout)
 }

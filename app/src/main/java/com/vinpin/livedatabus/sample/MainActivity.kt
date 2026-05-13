@@ -3,7 +3,6 @@ package com.vinpin.livedatabus.sample
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.Observer
 import com.vinpin.livedatabus.LiveDataBus
 import com.vinpin.livedatabus.sample.databinding.ActivityMainBinding
 

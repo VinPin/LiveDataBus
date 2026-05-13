@@ -1,5 +1,10 @@
 # LiveDataBus
 
+[![](https://jitpack.io/v/VinPin/LiveDataBus.svg)](https://jitpack.io/#VinPin/LiveDataBus)
+[![API](https://img.shields.io/badge/API-16%2B-brightgreen.svg)](https://developer.android.com/about/dashboards/platform-versions)
+[![Kotlin](https://img.shields.io/badge/Kotlin-1.6.21-blue.svg)](https://kotlinlang.org/)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 基于 Android LiveData 实现的轻量级事件总线，替代传统 EventBus，具备生命周期感知能力，自动避免内存泄漏，使用简单、无侵入性。
 
 1. **生命周期感知**：依托 LiveData 特性，观察者（Activity/Fragment）会根据自身生命周期自动注册 /
@@ -80,3 +85,20 @@ LiveDataBus.clear()
 | 线程切换   | 自动切换主线程（无需配置）        | 需手动指定线程（如 ThreadMode.MAIN） |
 | 使用复杂度  | 低（无需注解，直接调用）         | 较高（需添加 @Subscribe 注解）      |
 | 内存泄漏风险 | 无                    | 有（忘记解绑时）                   |
+
+## 构建
+
+LiveDataPermissions 使用现代 Gradle 构建系统，支持 Kotlin DSL 和版本目录（Version Catalogs）。
+
+- **编译 SDK**: 31
+- **最低 SDK**: 16
+- **Kotlin 版本**: 1.6.21
+- **构建工具**: AGP 7.4.2
+
+## 联系我们
+
+如有任何问题或建议，请通过 GitHub Issues 联系我们。
+
+## 致谢
+
+感谢所有为 LiveDataBus 做出贡献的开发者！

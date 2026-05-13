@@ -37,7 +37,6 @@ android {
 dependencies {
     api(libs.androidx.core.ktx)
     api(libs.androidx.appcompat)
-    api(libs.android.material)
 }
 
 tasks.register<Jar>("sourcesJar") {
